@@ -29,10 +29,33 @@ a {
   color: inherit;
 }
 
-img {
+img,svg {
   width: 100%;
+  display: block;       /* Убирает тот самый лишний отступ снизу */
+  height: auto;  
 }
 
 button {
   font: inherit;
+}
+
+address {
+  /* 1. Сбрасываем браузерный курсив в нормальный прямой текст */
+  font-style: normal;
+}
+
+
+ul, ol {
+  list-style: none; /* убирает точки или цифры */
+  margin: 0;         /* убирает внешние отступы */
+  padding: 0;        /* убирает внутренние отступы */
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
