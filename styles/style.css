@@ -46,12 +46,7 @@
   max-width: 240px;
 }
 
-.footer .address {
-  max-width: 264px;
-}
-
 .address__item {
-  align-items: flex-start;
   font-size: 18px;
   line-height: 24.2px;
 }
@@ -60,11 +55,6 @@
   text-decoration: underline;
   text-decoration-skip-ink: none; /* запрещает разрывать линию под буквами и цифрами */
   text-underline-offset: 4px; /* опускает линию чуть ниже букв, как в макете */
-}
-
-.address-p {
-  margin: 0;
-  text-decoration: none;
 }
 
 .cover {
@@ -126,7 +116,6 @@
 }
 
 .cover__description-text {
-  margin: 0;
   color: #ffffff;
   font-size: 22px;
   line-height: 28px;
@@ -264,7 +253,6 @@
 }
 
 .about__text {
-  margin-top: 0;
   margin-bottom: 24px;
   font-size: 20px;
   line-height: 24px;
@@ -285,6 +273,7 @@
 .footer .address {
   justify-self: start;
   align-items: flex-start;
+  max-width: 264px;
 }
 
 .footer__menu {
