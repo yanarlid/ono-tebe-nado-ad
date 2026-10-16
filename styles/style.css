@@ -1,13 +1,10 @@
 /* место для вашего кода */
 .header {
-  display: grid; 
+  display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   height: 293px;
   padding: 92px 50px 96px 50px;
-}
-
-.header__menu {
 }
 
 .header__menu-list {
@@ -30,7 +27,7 @@
   font-size: 18px;
   line-height: 1;
   text-decoration-skip-ink: none;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 
 .header__link_active {
@@ -42,9 +39,6 @@
   width: 138px;
 }
 
-.header__logo-img {
-}
-
 .address {
   display: flex;
   flex-direction: column;
@@ -52,10 +46,14 @@
   max-width: 240px;
 }
 
+.footer .address {
+  max-width: 264px;
+}
+
 .address__item {
   align-items: flex-start;
   font-size: 18px;
-  line-height: 1.35;
+  line-height: 24.2px;
 }
 
 .address-a {
@@ -81,21 +79,18 @@
 }
 
 .overlay {
-  position: absolute; /* Отрываем от потока */
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; /* Кладем оверлей поверх картинки фона */
-  width: 100%; /* Растягиваем на всю ширину родителя */
-  height: 100%; /* Растягиваем на всю высоту родителя */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.6
-  ); /* Полупрозрачный черный цвет (проверьте точную прозрачность в Figma) */
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -107,13 +102,6 @@
   line-height: 1.15;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-
-  /*margin: 165px 50px 207px 50px;*/
-}
-
-.cover__title {
-  position: relative; /* z-index работает только у позиционированных элементов! */
-  z-index: 2; /* Вытаскиваем текст и кнопку на самый верх, над оверлеем */
 }
 
 .aligned-text {
@@ -129,13 +117,11 @@
 }
 
 .cover__description {
-
-  /* Не забудьте, что этот блок должен быть над оверлеем */
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: space-between; /* Раскидывает элементы по левому и правому краю */
-  align-items: center; /* Выравнивает их ровно по центру по вертикали */
+  justify-content: space-between;
+  align-items: center;
   margin: 0 50px 50px 50px;
 }
 
@@ -149,15 +135,12 @@
 }
 
 .cover__description-button {
-
-  /* Переопределение границ (тонкая белая рамка) */
   border: 1px solid #ffffff;
   padding: 12px 32px;
-  color: #ffffff; /* Белый текст */
-
+  color: #ffffff;
   font-size: 22px;
-  text-transform: uppercase; /* Заглавные буквы */
-  background-color: transparent; /* Прозрачный фон по заданию */
+  text-transform: uppercase;
+  background-color: transparent;
 }
 
 .lots {
@@ -177,9 +160,6 @@
   flex-wrap: wrap;
   gap: 25px;
   margin-top: 27px;
-}
-
-.lots__card-list-item {
 }
 
 .card-link {
@@ -214,7 +194,7 @@
 .card__title,
 .card__text {
   position: relative;
-  z-index: 2; /* Вытягиваем текст поверх оверлея */
+  z-index: 2;
 }
 
 .card__title {
@@ -232,28 +212,21 @@
 }
 
 .lots__look-more-link {
-  display: inline-block; /* Включает поддержку вертикальных отступов */
-  margin-top: 30px; /* Отступ от списка карточек (измерьте точную цифру в Figma!) */
+  display: inline-block;
+  margin-top: 30px;
   margin-left: 40px;
   color: #000000;
   font-size: 20px;
-
-  /* Настройка подчёркивания (в едином стиле с шапкой сайта) */
   text-decoration: underline;
-  text-decoration-skip-ink: none; /* Делает линию сплошной под буквами с хвостиками */
+  text-decoration-skip-ink: none;
   text-underline-offset: 4px;
 }
 
 .about {
   display: grid;
   grid-template-columns: 334px 1fr;
-  gap: 72px;
-
-  /* Если секцию нужно отдалить от лотов, добавьте внешний отступ */
+  gap: 25px;
   margin: 120px 24px 0 24px;
-}
-
-.about__column {
 }
 
 .about__column-left {
@@ -263,9 +236,8 @@
 .about__column-right {
   display: flex;
   flex-direction: column;
-
-  /* Это создаст отступ между заголовком и блоком с текстом */
   gap: 100px;
+  max-width: 687px;
 }
 
 .about__logo {
@@ -288,15 +260,16 @@
   margin-top: 136px;
   font-weight: 700;
   font-size: 40px;
+  text-transform: uppercase;
 }
 
 .about__text {
   margin-top: 0;
   margin-bottom: 24px;
+  font-size: 20px;
   line-height: 24px;
 }
 
-/* Чтобы у самого последнего абзаца не было лишнего отступа снизу: */
 .about__text:last-child {
   margin-bottom: 0;
 }
@@ -325,6 +298,7 @@
 }
 
 .footer__menu-link {
+  font-size: 18px;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   text-underline-offset: 4px;
