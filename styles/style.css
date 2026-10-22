@@ -154,6 +154,7 @@
 .card-link {
   display: block;
   height: 100%;
+  text-decoration: none;
 }
 
 .card {
@@ -193,6 +194,10 @@
   font-size: 22px;
   line-height: 1.2;
   text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
 .card__text {
